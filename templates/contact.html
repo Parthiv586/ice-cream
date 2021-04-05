@@ -1,0 +1,41 @@
+{% extends './base.html' %}
+{% block head %}Contact Us{% endblock head %}
+{% block title %}{% endblock title %}
+{% block body %}
+
+
+<div class="container-fluid px-0">
+
+    <img src="https://source.unsplash.com/1440x520/?Contact Us" alt="Error,Sorry for Inconvienance!">
+</div>
+<div class="container mb-3 py-4">
+    <form action="/contact2/" method="POST">
+    {% csrf_token %}
+        <div class="form-group">
+            <label style="background-color: springgreen; border-radius: 25px; " for="exampleFormControlInput1"
+                class="form-label">Your Name:</label>
+            <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+            <label style="background-color: springgreen; border-radius: 25px; " for="exampleFormControlInput2"
+                class="form-label">Your Email
+                address:</label>
+            <input type="email" name="email" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+            <label style="background-color: springgreen; border-radius: 25px; " for="exampleFormControlInput3"
+                class="form-label">Your Mobile Number:</label>
+            <input type="number" name="phone" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="form-label">Your Message:</label>
+            <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Response</button>
+    </form>
+</div>
+
+
+
+{% endblock body %}
